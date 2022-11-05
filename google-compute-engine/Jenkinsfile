@@ -8,7 +8,7 @@ pipeline {
     stages {
               stage ('checkout'){
             steps {
-                git branch: 'master', url: 'https://github.com/ishaqmdgcp/faheem.git'
+                git branch: 'main', url: 'https://github.com/rohitnaidu911/GCP.git'
             }
         }
 		stage('Set creds') {
@@ -53,7 +53,7 @@ pipeline {
   
     stage('App health check') {
 	 steps {
-            sh 'sleep 120'
+            sh 'sleep 90'
 	    sh 'curl http://$(cat ip.txt)'
     
     }
