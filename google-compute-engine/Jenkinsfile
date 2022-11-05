@@ -35,7 +35,7 @@ pipeline {
 	stage('Create Instance') {
 	 steps {
     
-    sh 'gcloud compute instances create $VM_NAME --zone=$ZONE --tags=http-server --metadata-from-file=startup-script=./google-compute-engine/startup-script.sh'
+    sh 'gcloud compute instances create $VM_NAME --zone=$ZONE --machine-type=n1-standard-2 --tags=http-server,https-server --create-disk=auto-delete=yes,boot=yes,device-name=rohit-instance3,image=projects/ubuntu-os-cloud/global/images/ubuntu-2004-focal-v20221018,mode=rw,size=10,type=projects/mi-uat-lab/zones/europe-west2-a/diskTypes/pd-balanced --metadata-from-file=startup-script=./google-compute-engine/startup-script.sh'
         
     }
     }
