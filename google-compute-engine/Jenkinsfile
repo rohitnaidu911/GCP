@@ -27,7 +27,7 @@ pipeline {
 		 dir('google-compute-engine')
 		 {
     
-        sh 'gcloud auth activate-service-account jenkins@mi-dev-lab.iam.gserviceaccount.com --key-file=jenkins.json'
+        sh 'gcloud auth activate-service-account rohitjenkins@mi-dev-lab.iam.gserviceaccount.com --key-file=jenkins.json'
     }
     }
 	}
